@@ -1,0 +1,85 @@
+
+---
+
+## 📥 Dataset Sources
+
+1. [PhysioNet/Computing in Cardiology Challenge](http://www.peterjbentley.com/heartchallenge/)
+2. [Kaggle Heartbeat Dataset and Baseline](https://www.kaggle.com/code/brsdincer/heartbeat-sounds-classification-analysis)
+
+---
+
+## 🧪 Methodology
+
+1. **Data Preprocessing**: Audio samples were preprocessed and normalized.
+2. **Model Development**:
+   - Deep learning models: `Conv1D`, `Conv2D`, `LSTM`, and `RNN`
+   - Classical ML models for benchmarking
+3. **Teacher Model**: High-capacity deep learning model trained on heart sound data.
+4. **Student Model**: Smaller model trained via **knowledge distillation** from teacher using contrastive loss.
+5. **K-Means Clustering**: Used to improve model class separation.
+6. **Visualization & Analysis**:
+   - Confusion matrix
+   - SHAP (SHapley Additive exPlanations) for interpretability
+
+---
+
+## 📊 Results
+
+| Model          | Accuracy (avg) | Accuracy Gain (with K-means) |
+|----------------|----------------|-------------------------------|
+| Teacher Model  | ~84%           | N/A                           |
+| Student Model  | ~80%           | +2–4%                         |
+| Scratch Model  | ~75%           | N/A                           |
+
+- **Efficiency**: Student models are significantly smaller and faster.
+- **Interpretability**: SHAP and confusion matrices were used to interpret predictions.
+
+---
+
+## 🧩 Technologies Used
+
+- Python, Jupyter Notebook
+- TensorFlow / Keras
+- Scikit-learn
+- SHAP (Explainable AI)
+- Matplotlib, Seaborn
+- Librosa (for audio processing)
+
+---
+
+## 🏥 Applications
+
+- Real-time heart monitoring
+- Deployment in mobile and edge devices
+- Telemedicine and rural healthcare systems
+
+---
+
+## 📖 References
+
+1. [Contrastive Learning Papers](https://arxiv.org/ftp/arxiv/papers/2305/2305.00141.pdf)  
+2. [SHAP for Explainable AI](https://towardsdatascience.com/explainable-ai-xai-with-shap-multi-class-classification-problem-64dd30f97cea)  
+3. [Related work on Medical AI](https://www.sciencedirect.com/science/article/pii/S1746809422006449)  
+4. See full reference list in [📄 Project Report](./report/Barish_Sarkhel_Summer_Project_Report.docx)
+
+---
+
+## 👨‍💻 Author
+
+**Barish Sarkhel**  
+IVR No: 20201242  
+Indian Institute of Science Education and Research (IISER), Pune  
+Summer Internship at IIT Patna under Prof. Dr. Joydeep Chandra
+
+---
+
+## 📄 Report
+
+📥 Full research report with background, methodology, analysis, and results is available [here](./report/Barish_Sarkhel_Summer_Project_Report.docx)
+
+---
+
+## 📜 License
+
+This project is shared for academic and educational purposes. For reuse or collaboration, please contact the author.
+
